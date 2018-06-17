@@ -1,0 +1,54 @@
+var senadores16 = {
+    "candidatos": [
+  {
+    "Candidato": "Juan Antonio Ixtlahuac Orihuela",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/JAntonioIxtlahuac/?ref=br_rs"
+  },
+  {
+    "Candidato": "Xochitl Gabriela Ruiz Gonzalez",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/XochitlRuizG/?ref=br_rs"
+  },
+  {
+    "Candidato": "Gerardo Andres Herrera Perez",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/AmigosdeGerardoHerrera/?ref=br_rs"
+  },
+  {
+    "Candidato": "Marx Aguirre Ochoa",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/Marx-Aguirre-281361342400750/?ref=br_rs"
+  },
+  {
+    "Candidato": "Araceli Angeles Moraila Martinez",
+    "Partido": "Nueva Alianza",
+    "Facebook": "https://www.facebook.com/aracelidiputada/?ref=br_rs"
+  },
+  {
+    "Candidato": "Rafael Torres Garcia",
+    "Partido": "Nueva Alianza",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Antonio Garcia Conejo",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/antonio.garciaconejo.PRD/?ref=br_rs"
+  },
+  {
+    "Candidato": "Alma Mireya Gonzalez Sanchez",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/AlmaMireyaPAN/?ref=br_rs"
+  },
+  {
+    "Candidato": "Blanca Estela Pi&Ntilde;a Gudi&Ntilde;o",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Cristobal Arias Solis",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "https://www.facebook.com/CristobalAriasSolis/?ref=br_rs"
+  }
+]
+}

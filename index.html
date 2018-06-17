@@ -123,6 +123,25 @@
                     </table>
                 </div>
             </div>
+            <div class="row" id="diputadosl">
+                <div class="col-md-1"> </div>
+                <div class="col-md-10 center">
+                    <h1>Diputados Locales <span id="estado"></span></h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Candidato</th>
+                                <th>Partido</th>
+                                <th>Redes Sociales</th>
+                            </tr>
+                        </thead>
+                        <tbody id="diputadosltabla">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </section>
     <footer id="footer">
@@ -131,6 +150,10 @@
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTXNmrwgmShbjgijmULgdUfjSstQu3uyE&sensor=false&libraries=places,drawing,geometry"></script>
     <script type="text/javascript" src="data/18s.json"></script>
     <script type="text/javascript" src="data/18d.json"></script>
+    <script type="text/javascript" src="data/16s.json"></script>
+    <script type="text/javascript" src="data/16l.json"></script>
+    <script type="text/javascript" src="data/16d.json"></script>
+    <script type="text/javascript" src="data/16f.geojson"></script>
     <script type="text/javascript" src="data/02s.json"></script>
     <script type="text/javascript" src="data/02d.json"></script>
     <!-- <script src="dist/scripts/main.js"></script> -->
@@ -143,11 +166,11 @@
             var poly = geojson["features"][i]["geometry"];
             var isInside1 = turf.inside(point, poly);
             if (isInside1) {
-                console.log(geojson["features"][i]["properties"]["distrito"]);
-                break;
+                return geojson["features"][i]["properties"]["distrito"];
             }
         }
     }
+
 
 
 
@@ -174,6 +197,13 @@
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
             init('02', [29.95, -115.11666666667], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        } else if (estado === "Michoacán") {
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('16', [19.168611111111, -101.89972222222], 8);
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);
@@ -243,10 +273,12 @@
         map.data.addListener('click', function(event) {
             var entidad = event.feature.getProperty('entidad');
             var distrito = event.feature.getProperty('distrito');
-            //var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
-            //alert(string_test);
+            var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
+            var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
             $("#results").css('display', 'block');
             if (entidad === 18) {
+                $("#diputadosl").css('display', 'none');;
+
                 console.log("eu we entramos");
                 var html = "";
                 for (var i = 0; i < senadores18["candidatos"].length; i++) {
@@ -274,6 +306,8 @@
 
 
             } else if (entidad === 2) {
+                $("#diputadosl").css('display', 'none');;
+
                 console.log("eu we entramos a bc");
                 var html = "";
                 for (var i = 0; i < senadores02["candidatos"].length; i++) {
@@ -300,6 +334,57 @@
                 }, 2000);
 
 
+            } else if (entidad === 16) {
+                console.log("eu we entramos a michoacan");
+                var html = "";
+                for (var i = 0; i < senadores16["candidatos"].length; i++) {
+                    var redessociales = "";
+                    if (senadores16["candidatos"][i]["Facebook"].length > 5) {
+                        redessociales = "<a class='redesSociales' target='_blank' href='" + senadores16["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                    }
+                    html = html + "<tr><th>" + senadores16["candidatos"][i]["Candidato"] + "</th><th>" + senadores16["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                }
+                $("#senadores").html(html);
+                html = "";
+                for (var i = 0; i < diputadoslocales16["candidatos"].length; i++) {
+                    if (diputadoslocales16["candidatos"][i]["Distrito"] === distrito) {
+                        var redessociales = "";
+                        if (diputadoslocales16["candidatos"][i]["Facebook"].length > 5) {
+                            redessociales = "<a class='redesSociales' target='_blank' href='" + diputadoslocales16["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                        }
+                        html = html + "<tr><th>" + diputadoslocales16["candidatos"][i]["Candidato"] + "</th><th>" + diputadoslocales16["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                    }
+                }
+                $("#diputadosl").css('display', 'block');;
+                $("#diputadosltabla").html(html);
+                var pt1 = [long,lat-0.02];
+                console.log(pt1);
+                var distrito_federal = buscadorPuntos(pt1,mapFederal16)
+                console.log(distrito_federal);
+
+
+                //var distrito_federal = 1;
+                html = "";
+                for (var i = 0; i < diputadosfederales16["candidatos"].length; i++) {
+                    if (diputadosfederales16["candidatos"][i]["Distrito"] === distrito_federal) {
+                        var redessociales = "";
+                        if (diputadosfederales16["candidatos"][i]["Facebook"].length > 5) {
+                            redessociales = "<a class='redesSociales' target='_blank' href='" + diputadosfederales16["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                        }
+                        html = html + "<tr><th>" + diputadosfederales16["candidatos"][i]["Candidato"] + "</th><th>" + diputadosfederales16["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                    }
+                }
+                $("#diputadosf").html(html);
+
+
+                $('html, body').animate({
+                    scrollTop: $("#results").offset().top
+                }, 2000);
+                
+
+            } else {
+                var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
+                alert(string_test);
             }
         });
 
