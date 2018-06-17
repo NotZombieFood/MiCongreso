@@ -277,8 +277,7 @@
             var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
             $("#results").css('display', 'block');
             if (entidad === 18) {
-                $("#diputadosl").css('display', 'none');;
-
+                $("#diputadosl").css('display', 'none');
                 console.log("eu we entramos");
                 var html = "";
                 for (var i = 0; i < senadores18["candidatos"].length; i++) {
