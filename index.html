@@ -96,10 +96,15 @@
                             <tr>
                                 <th>Candidato</th>
                                 <th>Partido</th>
-                                <th>Candidato</th>
+                                <th>Redes Sociales</th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <th>Mariana Deyanira Benitez Ruelas</th>
+                                <th>Independiente</th>
+                                <th><a class="redesSociales" href=""><i class="fab fa-facebook-square"></i></a></th>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -113,8 +118,9 @@
                     <table id="senadores">
                         <thead>
                             <tr>
-                                <th>Header content 1</th>
-                                <th>Header content 2</th>
+                                <th>Candidato</th>
+                                <th>Partido</th>
+                                <th>Redes Sociales</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -221,6 +227,7 @@
             var distrito = event.feature.getProperty('distrito');
             var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
             alert(string_test);
+            $("#results").css('display', 'block');
         });
 
         google.maps.event.addListener(map, 'click', function(e) {

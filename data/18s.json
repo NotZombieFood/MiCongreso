@@ -1,180 +1,54 @@
-var s18 = {
+var senadores18 = {
     "candidatos": [
-    {
-        "numListaSenador": 1,
-        "fechaNacimiento": "1986-10-27",
-        "idCandidatura": 20938,
-        "idNumFormula": 28025,
-        "edad": 31,
-        "idAsociacion": 2,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 41783,
-        "nombreCandidato": "JASMINE MARIA BUGARIN RODRIGUEZ",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "MARTHA ROCIO PARTIDA GUZMAN",
-        "sexo": "M"
-    },
-    {
-        "numListaSenador": 2,
-        "fechaNacimiento": "1985-12-18",
-        "idCandidatura": 20938,
-        "idNumFormula": 28059,
-        "edad": 32,
-        "idAsociacion": 2,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 41851,
-        "nombreCandidato": "MANUEL NARVAEZ NAVARRO",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "JOSE MARTIN MEJIA SORIA",
-        "sexo": "H"
-    },
-    {
-        "numListaSenador": 1,
-        "fechaNacimiento": "1966-05-23",
-        "idCandidatura": 20938,
-        "idNumFormula": 23024,
-        "edad": 51,
-        "idAsociacion": 5,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 32236,
-        "nombreCandidato": "SANDRA LUZ. RANGEL LOMELI",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "ANA LILIANA RODRIGUEZ MONTA&Ntilde;O",
-        "sexo": "M"
-    },
-    {
-        "numListaSenador": 2,
-        "fechaNacimiento": "1963-04-10",
-        "idCandidatura": 20938,
-        "idNumFormula": 22989,
-        "edad": 54,
-        "idAsociacion": 5,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 32166,
-        "nombreCandidato": "JAVIER CASTA&Ntilde;EDA IBARRA",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "JUAN CARLOS CASTA&Ntilde;EDA RAMIREZ",
-        "sexo": "H"
-    },
-    {
-        "numListaSenador": 1,
-        "fechaNacimiento": "1963-01-04",
-        "idCandidatura": 20938,
-        "idNumFormula": 26776,
-        "edad": 55,
-        "idAsociacion": 7,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 39408,
-        "nombreCandidato": "MARTIN CARRILLO GUZMAN",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "ICKOV S IVAN ALVAREZ DELGADO",
-        "sexo": "H"
-    },
-    {
-        "numListaSenador": 2,
-        "fechaNacimiento": "1967-07-23",
-        "idCandidatura": 20938,
-        "idNumFormula": 26007,
-        "edad": 50,
-        "idAsociacion": 7,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 37934,
-        "nombreCandidato": "LILIANA GUILLERMINA VALENZUELA ONTIVEROS",
-        "tipoAsociacion": 1,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "SAHILI TANZANIA CORTES GARCIA",
-        "sexo": "M"
-    },
-    {
-        "numListaSenador": 1,
-        "fechaNacimiento": "1984-03-20",
-        "idCandidatura": 20938,
-        "idNumFormula": 25588,
-        "edad": 34,
-        "idAsociacion": 82,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 37107,
-        "nombreCandidato": "GLORIA ELIZABETH NU&Ntilde;EZ SANCHEZ",
-        "tipoAsociacion": 3,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "MARTHA MARIA RODRIGUEZ DOMINGUEZ",
-        "sexo": "M"
-    },
-    {
-        "numListaSenador": 2,
-        "fechaNacimiento": "1964-06-03",
-        "idCandidatura": 20938,
-        "idNumFormula": 24842,
-        "edad": 53,
-        "idAsociacion": 82,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "idCandidato": 35756,
-        "nombreCandidato": "GUADALUPE ACOSTA NARANJO",
-        "tipoAsociacion": 3,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "RODRIGO GONZALEZ BARRIOS",
-        "sexo": "H"
-    },
-    {
-        "numListaSenador": 1,
-        "propuesta3": "Erradicar la violencia contra las mujeres desde una perspectiva cultural, con un cambio en nuestra educaci&oacute;n en materia de igualdad, pero sobre todo acabando con la impunidad.",
-        "fechaNacimiento": "1967-11-26",
-        "propuesta2": "\"Un Estado de Derecho y Combate a la corrupci&oacute;n, transparencia y gobierno abierto, consolidar sistema nacional anti-corrupci&oacute;n. \"",
-        "propuesta1": "Revisar la reforma educativa: fortaleciendo las actividades de evaluaci&oacute;n para mejorar el desempe&ntilde;o docente, recuperar el orgullo de los maestros con una formaci&oacute;n y actualizaci&oacute;n permanente, reforma en contenidos con los maestros y dignificar las escuelas con infraestructura, servicios y equipamiento para la ense&ntilde;anza.",
-        "descripcionCandidato": "Porque creo que M&eacute;xico necesita un cambio y tengo la experiencia para contribuir a que hagamos de nuestra Naci&oacute;n un espacio de oportunidades para todos, porque soy maestra y coincido con nuestro candidato a la Presidencia en la necesidad de una reforma educativa con los maestros.",
-        "idCandidatura": 20938,
-        "idNumFormula": 33392,
-        "descripcionTP": "He participado en la vida p&uacute;blica en actividades relacionadas con los derechos e igualdad de la mujer y desarrollo social; como Diputada Federal en la LXI Legislatura; Diputada Local en la XXVI Legislatura; Como Presidenta Municipal de Tepic en dos periodos diferentes.",
-        "edad": 50,
-        "idAsociacion": 80,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "descripcionHLC": "Maestra de profesi&oacute;n, educadora y normalista, me he desempe&ntilde;ado como Regidora del Municipio de Tepic; Directora del Registro Civil de Tepic; Directora del Instituto de las Mujeres de Tepic, Secretaria General de Gobierno del Estado de Nayarit y Secretaria de Desarrollo Social.",
-        "idCandidato": 51894,
-        "idGrado": 8,
-        "nombreCandidato": "CORA CECILIA PINEDO ALONSO",
-        "tipoAsociacion": 3,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "SANDRA ELIZABETH ALONSO GUTIERREZ",
-        "sexo": "M",
-        "estatusVal": 1
-    },
-    {
-        "numListaSenador": 2,
-        "propuesta3": "Iniciativas para que la mujer tenga las mismas oportunidades de crecimiento laboral y social.",
-        "fechaNacimiento": "1951-01-11",
-        "propuesta2": "Iniciativas para mantener nuestras playas impecables y fortalecer la seguridad.",
-        "propuesta1": "Potencializar al estado de Nayarit aprovechando su riqueza natural para atraer al turismo.",
-        "urlFoto": "/media/cycc/img/fotocandidato/32490.jpg",
-        "descripcionCandidato": "\"Porque s&eacute; como resolver los problemas que hoy nos dividen, lastiman y ofenden a la sociedad. Tengo la experiencia, el conocimiento, y el coraz&oacute;n con la fortaleza necesaria para potencializar en nuestro estado, las riquezas de los tantos recursos naturales y sociales, que hoy est&aacute;n siendo saqueados y desaprovechados debido a la mala administraci&oacute;n y ambici&oacute;n al enriquecimiento propio. Yo agradezco la oportunidad de poder representar en Nayarit a un movimiento de regeneraci&oacute;n nacional que de la mano con los partidos que conforman la coalici&oacute;n lograremos sacar adelante las solicitudes de la gente y sobre todo de este hermoso estado que hoy se encuentra sumergido en la miseria y terror por tanta inseguridad. Soy candidato porque estoy 100 comprometido a ¡NO TRAICIONAR!\"",
-        "idCandidatura": 20938,
-        "idNumFormula": 23152,
-        "descripcionTP": "\"* Diputado Federal Propietario LX 2006-2009  * Senador Propietario LIX 2003-2006  * Senador Propietario LVIII 2000-2003  * Diputado Federal Propietario LVII 1997-2000  * Candidato a Gobernador del Estado de Nayarit 2017  * Candidato a presidente municipal de Tepic 2008  * Candidato a Gobernador del Estado de Nayarit 2005  * Candidato a presidente municipal de Tepic 1999 \"",
-        "edad": 67,
-        "idAsociacion": 80,
-        "nombreCorto": "SENADORES MR",
-        "idTipoCandidatura": 2,
-        "descripcionHLC": "\" * Delegado Estatal en Chiapas  Instituto Mexicano del Seguro Social (IMSS)  * Delegado Estatal en Nayarit  Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado (ISSSTE)  * Director del Hospital \"\"Aquiles Calles Ram&iacute;rez\"\"  Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado (ISSSTE)  * Secretario de Salud en Nayarit  Secretar&iacute;a de Salud y Asistencia (SSA)  * M&eacute;dico del Instituto de Seguridad y Servicios Sociales de los Trabajadores del Estado (ISSSTE)  * M&eacute;dico de la Secretar&iacute;a de Salud y Asistencia (SSA)  * Docente en la Universidad Aut&oacute;noma de Nayarit de la asignatura de Gineco-obstetricia\"",
-        "idCandidato": 32490,
-        "idGrado": 8,
-        "nombreCandidato": "MIGUEL ANGEL NAVARRO QUINTERO",
-        "tipoAsociacion": 3,
-        "idEstadoEleccion": 18,
-        "nombreSuplente": "DANIEL SEPULVEDA ARCEGA",
-        "sexo": "H",
-        "estatusVal": 1
-    }]
+  {
+    "Candidato": "Jasmine Maria Bugarin Rodriguez",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/JasminBugarin2/"
+  },
+  {
+    "Candidato": "Manuel Narvaez Navarro",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/manuelnarvaeznav/photos/p.621000581600007/621000581600007/?type=1&theater"
+  },
+  {
+    "Candidato": "Sandra Luz. Rangel Lomeli",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/SandraPartidoVerde/"
+  },
+  {
+    "Candidato": "Javier Casta&Ntilde;Eda Ibarra",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/Javier-Casta%C3%B1eda-416723642122824/"
+  },
+  {
+    "Candidato": "Martin Carrillo Guzman",
+    "Partido": "Nueva Alianza",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Liliana Guillermina Valenzuela Ontiveros",
+    "Partido": "Nueva Alianza",
+    "Facebook": "https://www.facebook.com/Liliana-Valenzuela-Ontiveros-1398546463625583/"
+  },
+  {
+    "Candidato": "Gloria Elizabeth Nu&Ntilde;Ez Sanchez",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/GloriaNayarit"
+  },
+  {
+    "Candidato": "Guadalupe Acosta Naranjo",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/yovoyconnaranjo/"
+  },
+  {
+    "Candidato": "Cora Cecilia Pinedo Alonso",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "https://www.facebook.com/Corasenadora1/"
+  },
+  {
+    "Candidato": "Miguel Angel Navarro Quintero",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "https://www.facebook.com/MiguelAngelNavarroOficial/"
+  }
+]
 }
