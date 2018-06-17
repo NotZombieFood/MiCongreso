@@ -1,0 +1,132 @@
+/* Estilos Mapa de Google */
+.controls {
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 2px 0 0 2px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    height: 32px;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+    background-color: #FF7F7FFF;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 12px;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    color: white;
+    right: 80px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 300px;
+    display: none;
+}
+
+#pac-input::placeholder{
+  color: white;
+}
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+
+#map{
+  display: none;
+}
+.pac-container {
+    font-family: Roboto;
+}
+
+#type-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: 300;
+}
+
+.map-box{
+  position: relative;
+}
+
+.gmnoprint{
+  pointer-events: none;
+}
+
+/* Mapa SVG */
+
+.land {
+  fill: #CCCCCC;
+  fill-opacity: 1;
+  stroke: white;
+  stroke-opacity: 1;
+  stroke-width: 0.5;
+  transition: all 1s;
+}
+
+#mapa {
+  height: 100vh;
+}
+
+.land:hover {
+  fill: #454545;
+}
+
+.active {
+  fill: #404040;
+}
+
+.magic-centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.w100{
+  height: 100vh;
+}
+.padding-right{
+  padding-right: 30px;
+}
+.center {
+  text-align: center;
+}
+#mapa h1{
+  font-weight: bolder;
+}
+
+.redesSociales{
+  margin: 0px 8px;
+  color: #454545;
+  transition: all 1s;
+  font-size: 30px;
+}
+
+.redesSociales:hover{
+  color: #FF7F7FFF;
+}
+#mapa hr {
+  border: 2px solid #404040;
+  width: 45%;
+  text-align: left;
+  margin: 20px 0px;
+}
+
+#mapa-svg{
+  width: 67vw;
+}
+
+#menuServicios {
+  width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+  z-index: 10;
+  height: 100vh;
+  overflow-y: scroll;
+}

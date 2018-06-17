@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box
+}
+
+*,
+:after,
+:before {
+    box-sizing: inherit;
+    outline: 0
+}
+
+body{
+	margin: 0px;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-ExtraBold.ttf');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Light.ttf');
+    font-weight: 200;
+    font-style: normal;
+}
+
+$light: 200;
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1,h2,h3,h4,h5,h6,a,p,li{
+	font-family: 'Gilroy';
+}
+$melon: #FF4C4F;
