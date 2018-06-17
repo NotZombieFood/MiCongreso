@@ -83,47 +83,94 @@
         <input id="pac-input" class="controls" type="text" placeholder="Busca tu dirección">
         <div id="map" style="height: 100vh; width: 100%;"></div>
     </div>
-    <section id="results"></section>
+    <section id="results">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1">  </div>
+                <div class="col-md-10 center">
+                    <h1>Diputados Federales <span id="distritoFederal"></span></h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                    <table id="diputadosf">
+                        <thead>
+                            <tr>
+                                <th>Candidato</th>
+                                <th>Partido</th>
+                                <th>Candidato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-1">  </div>
+                <div class="col-md-10 center">
+                    <h1>Senadores <span id="estado"></span></h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                    <table id="senadores">
+                        <thead>
+                            <tr>
+                                <th>Header content 1</th>
+                                <th>Header content 2</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer id="footer">
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTXNmrwgmShbjgijmULgdUfjSstQu3uyE&sensor=false&libraries=places"></script>
     <script type="text/javascript" src="data/18s.json"></script>
     <script type="text/javascript" src="data/18d.json"></script>
-
     <!-- <script src="dist/scripts/main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
     <script type="text/javascript">
     $('[data-toggle="tooltip"]').tooltip();
-        $('.land').click(function(event) {
-            var estado = $(this).data("title");
-            console.log(estado);
-            $('.land').removeClass('active');
-            $(this).addClass("active");
-            if(estado==="Jalisco"){
-                var url = "https://jaliscocomovotamos.netlify.com";
-                window.open(url,'_blank');
-            } else if(estado==="Colima"){
-                var url = "http://ieecolima.org.mx/micandidato2018.html";
-                window.open(url,'_blank');
-            } else if (estado === 'Nayarit'){
-                $("#map").css('display', 'block');
-                $("#pac-input").css('display', 'block');
-                init('18',[21.743888888889,-105.22833333333]);
-                 $('html, body').animate({
-                    scrollTop: $("#map").offset().top
-                }, 2000);
-            }
-        });
+    $('.land').click(function(event) {
+        var estado = $(this).data("title");
+        console.log(estado);
+        $('.land').removeClass('active');
+        $(this).addClass("active");
+        if (estado === "Jalisco") {
+            var url = "https://jaliscocomovotamos.netlify.com";
+            window.open(url, '_blank');
+        } else if (estado === "Colima") {
+            var url = "http://ieecolima.org.mx/micandidato2018.html";
+            window.open(url, '_blank');
+        } else if (estado === 'Nayarit') {
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('18', [21.743888888889, -105.22833333333]);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }
+    });
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    var partidos = [["PRI",2],["PT",4],["Partido Verde",5],["Nueva Alianza",7],["MORENA",8],["Encuentro Social",10],["PAN, PRD, Movimiento Ciudadano",82],["PT, MORENA, FES",80]];
+    var partidos = [
+        ["PRI", 2],
+        ["PT", 4],
+        ["Partido Verde", 5],
+        ["Nueva Alianza", 7],
+        ["MORENA", 8],
+        ["Encuentro Social", 10],
+        ["PAN, PRD, Movimiento Ciudadano", 82],
+        ["PT, MORENA, FES", 80]
+    ];
 
-    function init(estado,coordenadas) {
+    function init(estado, coordenadas) {
         var markersArray = [];
 
         function clearOverlays() {
