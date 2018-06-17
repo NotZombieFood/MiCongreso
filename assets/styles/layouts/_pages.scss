@@ -24,6 +24,7 @@
 }
 #results table{
   width: 100%;
+  margin-top: 50px;
 }
 
 #results table thead{
@@ -32,7 +33,7 @@
   color: white;
   text-align: center;
 }
-#results table tbody{
+#results table tbody tr{
   border: none;
   border-bottom: 1px solid #FF7F7FFF;
   color: #404040;

@@ -86,12 +86,12 @@
     <section id="results">
         <div class="container">
             <div class="row">
-                <div class="col-md-1">  </div>
+                <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
                     <h1>Diputados Federales <span id="distritoFederal"></span></h1>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
-                    <table id="diputadosf">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Candidato</th>
@@ -99,23 +99,18 @@
                                 <th>Redes Sociales</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th>Mariana Deyanira Benitez Ruelas</th>
-                                <th>Independiente</th>
-                                <th><a class="redesSociales" href=""><i class="fab fa-facebook-square"></i></a></th>
-                            </tr>
+                        <tbody id="diputadosf">
                         </tbody>
                     </table>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-1">  </div>
+                <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
                     <h1>Senadores <span id="estado"></span></h1>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
-                    <table id="senadores">
+                    <table>
                         <thead>
                             <tr>
                                 <th>Candidato</th>
@@ -123,7 +118,7 @@
                                 <th>Redes Sociales</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="senadores">
                         </tbody>
                     </table>
                 </div>
@@ -133,13 +128,29 @@
     <footer id="footer">
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTXNmrwgmShbjgijmULgdUfjSstQu3uyE&sensor=false&libraries=places"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTXNmrwgmShbjgijmULgdUfjSstQu3uyE&sensor=false&libraries=places,drawing,geometry"></script>
     <script type="text/javascript" src="data/18s.json"></script>
     <script type="text/javascript" src="data/18d.json"></script>
+    <script type="text/javascript" src="data/02s.json"></script>
+    <script type="text/javascript" src="data/02d.json"></script>
     <!-- <script src="dist/scripts/main.js"></script> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js"></script>
     <script type="text/javascript">
+    function buscadorPuntos(point, geojson) {
+        for (var i = 0; i < geojson["features"].length; i++) {
+            var poly = geojson["features"][i]["geometry"];
+            var isInside1 = turf.inside(point, poly);
+            if (isInside1) {
+                console.log(geojson["features"][i]["properties"]["distrito"]);
+                break;
+            }
+        }
+    }
+
+
+
     $('[data-toggle="tooltip"]').tooltip();
     $('.land').click(function(event) {
         var estado = $(this).data("title");
@@ -155,7 +166,14 @@
         } else if (estado === 'Nayarit') {
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
-            init('18', [21.743888888889, -105.22833333333]);
+            init('18', [21.743888888889, -105.22833333333], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        } else if (estado === "Baja California") {
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('02', [29.95, -115.11666666667], 7);
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);
@@ -176,7 +194,7 @@
         ["PT, MORENA, FES", 80]
     ];
 
-    function init(estado, coordenadas) {
+    function init(estado, coordenadas, zoom_input) {
         var markersArray = [];
 
         function clearOverlays() {
@@ -189,7 +207,7 @@
 
         var mapOptions = {
             disableDefaultUI: false,
-            zoom: 8,
+            zoom: zoom_input,
             scrollwheel: false,
             center: { lat: coordenadas[0], lng: coordenadas[1] },
             //center: new google.maps.LatLng(19.5445516,-99.1430878) // Nova Scotia
@@ -225,9 +243,64 @@
         map.data.addListener('click', function(event) {
             var entidad = event.feature.getProperty('entidad');
             var distrito = event.feature.getProperty('distrito');
-            var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
-            alert(string_test);
+            //var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
+            //alert(string_test);
             $("#results").css('display', 'block');
+            if (entidad === 18) {
+                console.log("eu we entramos");
+                var html = "";
+                for (var i = 0; i < senadores18["candidatos"].length; i++) {
+                    var redessociales = "";
+                    if (senadores18["candidatos"][i]["Facebook"].length > 5) {
+                        redessociales = "<a class='redesSociales' target='_blank' href='" + senadores18["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                    }
+                    html = html + "<tr><th>" + senadores18["candidatos"][i]["Candidato"] + "</th><th>" + senadores18["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                }
+                $("#senadores").html(html);
+                html = "";
+                for (var i = 0; i < diputadosfederales18["candidatos"].length; i++) {
+                    if (diputadosfederales18["candidatos"][i]["Distrito"] === distrito) {
+                        var redessociales = "";
+                        if (diputadosfederales18["candidatos"][i]["Facebook"].length > 5) {
+                            redessociales = "<a class='redesSociales' target='_blank' href='" + diputadosfederales18["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                        }
+                        html = html + "<tr><th>" + diputadosfederales18["candidatos"][i]["Candidato"] + "</th><th>" + diputadosfederales18["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                    }
+                }
+                $("#diputadosf").html(html);
+                $('html, body').animate({
+                    scrollTop: $("#results").offset().top
+                }, 2000);
+
+
+            } else if (entidad === 2) {
+                console.log("eu we entramos a bc");
+                var html = "";
+                for (var i = 0; i < senadores02["candidatos"].length; i++) {
+                    var redessociales = "";
+                    if (senadores02["candidatos"][i]["Facebook"].length > 5) {
+                        redessociales = "<a class='redesSociales' target='_blank' href='" + senadores02["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                    }
+                    html = html + "<tr><th>" + senadores02["candidatos"][i]["Candidato"] + "</th><th>" + senadores02["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                }
+                $("#senadores").html(html);
+                html = "";
+                for (var i = 0; i < diputadosfederales02["candidatos"].length; i++) {
+                    if (diputadosfederales02["candidatos"][i]["Distrito"] === distrito) {
+                        var redessociales = "";
+                        if (diputadosfederales02["candidatos"][i]["Facebook"].length > 5) {
+                            redessociales = "<a class='redesSociales' target='_blank' href='" + diputadosfederales02["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                        }
+                        html = html + "<tr><th>" + diputadosfederales02["candidatos"][i]["Candidato"] + "</th><th>" + diputadosfederales02["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
+                    }
+                }
+                $("#diputadosf").html(html);
+                $('html, body').animate({
+                    scrollTop: $("#results").offset().top
+                }, 2000);
+
+
+            }
         });
 
         google.maps.event.addListener(map, 'click', function(e) {

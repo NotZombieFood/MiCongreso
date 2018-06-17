@@ -1,0 +1,54 @@
+var senadores02 = {
+    "candidatos": [
+  {
+    "Candidato": "Alejandro Arregui Ibarra",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/arreguimx/?ref=br_rs"
+  },
+  {
+    "Candidato": "Juana Laura Perez Floriano",
+    "Partido": "PRI",
+    "Facebook": "https://www.facebook.com/JuanitaPerezFloriano/"
+  },
+  {
+    "Candidato": "Ignacio Anaya Barriguete",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/nachoanayasenadorbc/?ref=br_rs"
+  },
+  {
+    "Candidato": "Veronica Judith Corona Gonzalez",
+    "Partido": "Partido Verde",
+    "Facebook": "https://www.facebook.com/veritocorona/?ref=br_rs"
+  },
+  {
+    "Candidato": "Efrain Monrreal Gastelum",
+    "Partido": "Nueva Alianza",
+    "Facebook": "https://www.facebook.com/efrainmonrrealg/?ref=br_rs"
+  },
+  {
+    "Candidato": "Mar&Iacute;A Del Rosario Lizarraga Sanchez",
+    "Partido": "Nueva Alianza",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Gina Andrea Cruz Blakcledge",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/Gina-Cruz-por-el-Senado-772464189500094/"
+  },
+  {
+    "Candidato": "Jorge Ramos Hernandez",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "https://www.facebook.com/Jorge.Ramos.Tijuana/?ref=br_rs"
+  },
+  {
+    "Candidato": "Jaime Bonilla Valdez",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "https://www.facebook.com/JaimeBonillaValdez/?ref=br_rs"
+  },
+  {
+    "Candidato": "Alejandra Del Carmen Leon Gastelum",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "https://www.facebook.com/alexleongastelum/?ref=br_rs"
+  }
+]
+}
