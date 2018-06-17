@@ -1,4 +1,4 @@
-var diputadosfederales18 = {
+var diputadosfederales = {
     "candidatos":[
   {
     "Candidato": "Maria Hilaria Dominguez Arvizu",

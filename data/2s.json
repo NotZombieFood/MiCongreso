@@ -1,4 +1,4 @@
-var senadores02 = {
+var senadores = {
     "candidatos": [
   {
     "Candidato": "Alejandro Arregui Ibarra",

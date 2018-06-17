@@ -1,4 +1,4 @@
-var diputadosfederales16 = {
+var diputadosfederales = {
     "candidatos":[
   {
     "Candidato": "J Reyes Galindo Pedraza",
