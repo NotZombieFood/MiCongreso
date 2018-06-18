@@ -237,6 +237,37 @@ font-size: 20px;
 .redesSociales:hover{
   color: #FF7F7FFF;
 }
+
+#contacto{
+  padding: 60px 0px;
+  background-color: #FF7F7FFF;
+
+}
+
+#contacto h1{
+  color: white;
+  font-size: 35px;
+}
+
+#contacto h2{
+  color: white;
+  font-size: 20px;
+}
+#contacto p{
+  font-size: 18px;
+  color: white;
+}
+
+#contacto a{
+  color: #FFDBDBFF;
+  text-decoration: none !important;
+  transition: all 1s;
+  font-size: 22px;
+}
+
+#contacto a:hover{
+  color: white;
+}
 #mapa hr {
   border: 2px solid #404040;
   width: 45%;
@@ -254,4 +285,18 @@ font-size: 20px;
   z-index: 10;
   height: 100vh;
   overflow-y: scroll;
+}
+
+@media screen and (max-width: 768px) {
+  #cta{
+  padding: 80px 40px;
+  font-size: 30px;
+}
+#mapa{
+  height: unset;
+  padding: 50px 0px;
+}
+.w100{
+  height: unset;
+}
 }
