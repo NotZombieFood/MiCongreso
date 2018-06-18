@@ -88,25 +88,6 @@
             <div class="row">
                 <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
-                    <h1>Diputados Federales <span id="distritoFederal"></span></h1>
-                    <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Candidato</th>
-                                <th>Partido</th>
-                                <th>Redes Sociales</th>
-                            </tr>
-                        </thead>
-                        <tbody id="diputadosf">
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-1"> </div>
-                <div class="col-md-10 center">
                     <h1>Senadores <span id="estado"></span></h1>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
@@ -123,12 +104,33 @@
                     </table>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-1"> </div>
+                <div class="col-md-10 center">
+                    <h1>Diputados Federales <span id="distritoFederal"></span></h1>
+                    <hr>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Candidato</th>
+                                <th>Partido</th>
+                                <th>Redes Sociales</th>
+                            </tr>
+                        </thead>
+                        <tbody id="diputadosf">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
             <div class="row" id="diputadosl">
                 <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
                     <h1>Diputados Locales <span id="estado"></span></h1>
                     <hr>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                    <div id="mensajeLocal">
+                    </div>
                     <table>
                         <thead>
                             <tr>
@@ -153,7 +155,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js"></script>
     <script type="text/javascript">
-    function cargarDatos(distrito,estado, local, long, lat) {
+    var resetPoint = $("#results").html();
+
+    function cargarDatos(distrito, estado, local, long, lat, localisgood, urllocal) {
         console.log("Cargando datos...");
         var rutaSenadores = "data/" + estado + "s.json";
         var rutaDiputadosFederales = "data/" + estado + "d.json";
@@ -183,21 +187,27 @@
                 $("#diputadosf").html(html);
             });
         } else {
-            var rutaDiputadosLocales = "data/" + estado + "l.json";
-            $.getScript(rutaDiputadosLocales, function() {
-                var html = "";
-                for (var i = 0; i < diputadoslocales["candidatos"].length; i++) {
-                    if (diputadoslocales["candidatos"][i]["Distrito"] === distrito) {
-                        var redessociales = "";
-                        if (diputadoslocales["candidatos"][i]["Facebook"].length > 5) {
-                            redessociales = "<a class='redesSociales' target='_blank' href='" + diputadoslocales["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+            if (!(localisgood)) {
+                var rutaDiputadosLocales = "data/" + estado + "l.json";
+                $.getScript(rutaDiputadosLocales, function() {
+                    var html = "";
+                    for (var i = 0; i < diputadoslocales["candidatos"].length; i++) {
+                        if (diputadoslocales["candidatos"][i]["Distrito"] === distrito) {
+                            var redessociales = "";
+                            if (diputadoslocales["candidatos"][i]["Facebook"].length > 5) {
+                                redessociales = "<a class='redesSociales' target='_blank' href='" + diputadoslocales["candidatos"][i]["Facebook"] + "'><i class='fab fa-facebook-square'></i></a>"
+                            }
+                            html = html + "<tr><th>" + diputadoslocales["candidatos"][i]["Candidato"] + "</th><th>" + diputadoslocales["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
                         }
-                        html = html + "<tr><th>" + diputadoslocales["candidatos"][i]["Candidato"] + "</th><th>" + diputadoslocales["candidatos"][i]["Partido"] + "</th><th>" + redessociales + "</th></td>";
                     }
-                }
+                    $("#diputadosl").css('display', 'block');;
+                    $("#diputadosltabla").html(html);
+                });
+            } else {
                 $("#diputadosl").css('display', 'block');;
-                $("#diputadosltabla").html(html);
-            });
+                $("#mensajeLocal").html('<h2><span>¡Tu estado está haciendo un gran trabajo en proporcionar herramientas de calidad!</span> Te recomendamos usar su herramienta para consultar esta información.</h2> <br><br> <a class="btn-results" href="' + urllocal + '">¡Llévame!</a>')
+                $("#diputadosltabla").parent().remove();
+            }
             var rutaMapaFederal = "data/" + estado + "f.geojson"
             var pt1 = [long, lat - 0.02];
             console.log(pt1);
@@ -252,6 +262,7 @@
             var url = "http://ieecolima.org.mx/micandidato2018.html";
             window.open(url, '_blank');
         } else if (estado === 'Nayarit') {
+            $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
             init('18', [21.743888888889, -105.22833333333], 8);
@@ -259,6 +270,7 @@
                 scrollTop: $("#map").offset().top
             }, 2000);
         } else if (estado === "Baja California") {
+            $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
             init('02', [29.95, -115.11666666667], 7);
@@ -266,12 +278,15 @@
                 scrollTop: $("#map").offset().top
             }, 2000);
         } else if (estado === "Michoacán") {
+            $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
             init('16', [19.168611111111, -101.89972222222], 8);
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);
+        } else if (estado === "Aguascalientes") {
+
         }
     });
 
@@ -332,13 +347,13 @@
             var long = 0;
             $("#results").css('display', 'block');
             if (entidad === 18) {
-                cargarDatos(distrito,18, false, long, lat);
+                cargarDatos(distrito, 18, false, long, lat, false, "");
             } else if (entidad === 2) {
-                cargarDatos(distrito,2, false, long, lat);
+                cargarDatos(distrito, 2, false, long, lat, false, "");
             } else if (entidad === 16) {
                 var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
                 var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
-                cargarDatos(distrito,16, true, long, lat);
+                cargarDatos(distrito, 16, true, long, lat, false, "");
             } else {
                 var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
                 alert(string_test);

@@ -18,7 +18,32 @@
   padding: 60px 0px;
   display: none;
 }
+#results p{
+  font-size: 18px;
+}
+#results h2{
+  font-size: 25px;
+}
+
+.btn-results{
+  padding: 10px 35px;
+  text-align: center;
+  background-color: #FF7F7FFF;
+  color: white;
+  transition: all 1s;
+  margin-top: 50px;
+}
+
+.btn-results:hover{
+  background-color: grey;
+  text-decoration: none;
+  color: white;
+}
+#results span{
+  color: #FF7F7FFF;
+}
 #results h1{
+  font-size: 35px;
   margin-top: 50px;
   margin-bottom: 5px;
 }
