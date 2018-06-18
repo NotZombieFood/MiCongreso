@@ -1,53 +1,6 @@
-# [Starter Basiko HTML](https://bitbucket.org/devbasiko/starter-basiko-html)
+# ComoVotamosMX
 
-Con la finalidad de desarrollar un proyecto de modo que cualquiera en Basiko lo pudiera interpretar y darle continuidad al mismo, es conveniente implementar el código con las siguientes nomenclaturas.
-
-  - Código encamillado.
-  - Estilos CSS separados y con etiquetas.
-  - Imágenes
-  - Scripts
-
-### Código encamillado
-Todo el código es escrito con separación de un tab de diferentes niveles tanto el HTML y los estilos CSS para su lectura correcta. Ejempliflico. 
-
-```html
-<!-- HTML -->
-<section><!--Nivel 1-->
-  <div class="container"><!--Nivel 3-->
-    <div class="row"><!--Nivel 3-->
-      <div class="col-md-3"> <!--Nivel 4-->
-        <p>Contenido</p><!--Nivel 5-->
-      </div>
-      <div class="col-md-9"> <!--Nivel 4-->
-        <p>Contenido</p><!--Nivel 5-->
-      </div>
-    </div>
-  </div>
-</section>
-```
-
-```css
-<!-- CSS -->
-body{   //Nivel 1
-  color: #000;     //Nivel 2
-  font-size:20px;     //Nivel 2
-}
-```
-
-### Estilos CSS separados y con etiquetas
-Los estilos css se asigan por archivos separados de acuerdo a la sección, es decir, si creamos una landing page que tiene un homepage y contacto los estilos deben de implementarse de la siguiente forma.
-Se crea un archivo de nombre _homepage.scss y otro de _contacto.scss. Ambos se guardan en assets/styles/layouts/ y se importa dentro del main.scss. Se declara con su ubicación:
-
-```scss
-@import "layouts/_homepage";
-@import "layouts/_contacto";
-```
-
-### Imágenes
-Todas las imágenes se deben de ubicarse dentro de assets/images nombrando primero la sección a la que pertenece y luego donde se ubica. Por ejemplo: homepage_principal.jpg 
-
-### Scripts
-Todos los scripts se colocan dentro del assets/scripts/main.js
+Inspirados por el gran trabajo de Jalisco como Vamos y su herramienta nos dimos a la tarea de replicarlo para todo méxico.
 
 
 # Complementos
@@ -135,35 +88,6 @@ If your local development URL looks like `http://localhost:8888/project-name/` y
   }
 ...
 ```
-
-### SVG support
-
-Sage Starter has built-in SVG support! The preferred method for using SVG as implemented is an SVG sprite.
-
-#### Usage
-
-Make sure each SVG has an ID.
-
-```svg
-<svg xmlns="http://www.w3.org/2000/svg">
-    <symbol id="twitter" viewBox="0 0 64 64">
-        <title>Twitter</title>
-        <path etc.../>
-    </symbol>
-</svg>
-```
-
-Save any SVG files you want to use into `/assets/images/sprites` and the build process will combine all of those images into one sprite.
-
-To use in markup, apply the ID to an SVG's Use element.
-
-```svg
-<svg role="img" title="Twitter">
-    <use xlink:href="map.svg#twitter"/>
-</svg>
-```
-
-Check out [SVG For Everybody](https://github.com/jonathantneal/svg4everybody) for IE and Edge 12 support of SVG sprites.
 
 ## Documentation
 
