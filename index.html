@@ -205,7 +205,7 @@
                 });
             } else {
                 $("#diputadosl").css('display', 'block');;
-                $("#mensajeLocal").html('<h2><span>¡Tu estado está haciendo un gran trabajo en proporcionar herramientas de calidad!</span> Te recomendamos usar su herramienta para consultar esta información.</h2> <br><br> <a class="btn-results" href="' + urllocal + '">¡Llévame!</a>')
+                $("#mensajeLocal").html('<h2><span>¡Tu estado está haciendo un gran trabajo en proporcionar herramientas de calidad!</span> Te recomendamos usar su herramienta para consultar esta información.</h2> <br><br> <a target="_blank" class="btn-results" href="' + urllocal + '">¡Llévame!</a>')
                 $("#diputadosltabla").parent().remove();
             }
             var rutaMapaFederal = "data/" + estado + "f.geojson"
@@ -259,8 +259,13 @@
             var url = "https://jaliscocomovotamos.netlify.com";
             window.open(url, '_blank');
         } else if (estado === "Colima") {
-            var url = "http://ieecolima.org.mx/micandidato2018.html";
-            window.open(url, '_blank');
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('06', [19.096666666667,-103.96083333333], 10);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
         } else if (estado === 'Nayarit') {
             $("#results").html(resetPoint);
             $("#map").css('display', 'block');
@@ -286,7 +291,13 @@
                 scrollTop: $("#map").offset().top
             }, 2000);
         } else if (estado === "Aguascalientes") {
-
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('01', [22.021666666667,-102.35638888889], 10);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
         }
     });
 
@@ -354,6 +365,14 @@
                 var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
                 var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
                 cargarDatos(distrito, 16, true, long, lat, false, "");
+            } else if (entidad === 1) {
+                var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
+                var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
+                cargarDatos(distrito, 1, true, long, lat, true, "http://comovotar.ieeags.org.mx");
+            } else if (entidad === 6) {
+                var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
+                var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
+                cargarDatos(distrito, 6, true, long, lat, true, "http://ieecolima.org.mx/micandidato2018.html");
             } else {
                 var string_test = "Estas picando el estado " + entidad + " y el distrito " + distrito;
                 alert(string_test);

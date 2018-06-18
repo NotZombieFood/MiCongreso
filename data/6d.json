@@ -1,0 +1,41 @@
+var diputadosfederales = {
+    "candidatos": [
+  {
+    "Candidato": "Martha Maria Zepeda Del Toro",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Distrito": 1,
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Mely Romero Celis",
+    "Partido": "PRI",
+    "Distrito": 1,
+    "Facebook": "https://www.facebook.com/MelyRomeroC/?ref=br_rs"
+  },
+  {
+    "Candidato": "Claudia Valeria Ya&Ntilde;Ez Centeno Y Cabrera",
+    "Partido": "PT, MORENA, FES",
+    "Distrito": 1,
+    "Facebook": "https://www.facebook.com/ClaudiaYanezCenteno/?ref=br_rs"
+  },
+  {
+    "Candidato": "Ciceron Alejandro Mancilla Gonzalez",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Distrito": 2,
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Francisco Alberto Zepeda Gonzalez",
+    "Partido": "PRI",
+    "Distrito": 2,
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Indira Vizcaino Silva",
+    "Partido": "PT, MORENA, FES",
+    "Distrito": 2,
+    "Facebook": "https://www.facebook.com/IndiraVizcainoS/"
+  }
+]
+  
+}

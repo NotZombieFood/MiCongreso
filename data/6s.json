@@ -1,0 +1,34 @@
+var senadores = {
+    "candidatos": [
+  {
+    "Candidato": "Maria Elena Abaroa Lopez",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Luis Humberto Ladino Ochoa",
+    "Partido": "PAN, PRD, Movimiento Ciudadano",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Gabriela Benavides Cobos",
+    "Partido": "PRI",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Fernando Moreno Pe&Ntilde;a",
+    "Partido": "PRI",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Joel Padilla Pe&Ntilde;a",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "NULL"
+  },
+  {
+    "Candidato": "Gricelda Valencia De La Mora",
+    "Partido": "PT, MORENA, FES",
+    "Facebook": "NULL"
+  }
+]
+}
