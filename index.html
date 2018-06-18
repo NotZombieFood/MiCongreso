@@ -25,15 +25,20 @@
                 <div class="col-md-4 magic-centering w100 ">
                     <div class="padding-right">
                         <h1>
-                            Cónoce a tus 
+                            MI CONGRESO
                         </h1>
+                        <h4>
+                            ¿Quiénes me pueden representar en el Congreso?
+                        </h4>
                         <hr>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
+                        <p>Conoce a los candidatos a senador, diputado federal y local, solo da click en tu estado e ingresa tu dirección
+                        </p>
                         <br>
                         <br>
                         <a class="redesSociales" href=""><i class="fab fa-facebook-square"></i></a>
                         <a class="redesSociales" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="redesSociales" href=""><i class="fab fa-github"></i></a>
+                        <a class="redesSociales" href="https://github.com/NotZombieFood/ComoVotamosMX"><i class="fab fa-github"></i></a>
+                        <a class="redesSociales" href="https://github.com/NotZombieFood/MapaElectoralMX"><i class="far fa-map"></i></a>
                     </div>
                 </div>
                 <div class="col-md-8 magic-centering w100">
@@ -83,14 +88,16 @@
         <input id="pac-input" class="controls" type="text" placeholder="Busca tu dirección">
         <div id="map" style="height: 100vh; width: 100%;"></div>
     </div>
+    <section id="cta">
+        Necesitamos a un congreso aliado de los ciudadanos, que verdaderamente nos represente, un Congreso habitado por personas capaces de legislar a favor de todos los mexicanos. ¡Podemos lograrlo!
+    </section>
     <section id="results">
         <div class="container">
             <div class="row">
                 <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
-                    <h1>Senadores <span id="estado"></span></h1>
+                    <h1>Candidatos a Senadores <span id="estado"></span></h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
                     <table>
                         <thead>
                             <tr>
@@ -102,14 +109,14 @@
                         <tbody id="senadores">
                         </tbody>
                     </table>
+                    <p class="leyenda">*Te recomendamos revisar su perfil en Facebook para encontrar más información acerca del candidato y sus propuestas para que puedas tomar una decisión informada.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
-                    <h1>Diputados Federales <span id="distritoFederal"></span></h1>
+                    <h1>Candidatos a Diputados Federales <span id="distritoFederal"></span></h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
                     <table>
                         <thead>
                             <tr>
@@ -121,14 +128,14 @@
                         <tbody id="diputadosf">
                         </tbody>
                     </table>
+                    <p class="leyenda">*Te recomendamos revisar su perfil en Facebook para encontrar más información acerca del candidato y sus propuestas para que puedas tomar una decisión informada.</p>
                 </div>
             </div>
             <div class="row" id="diputadosl">
                 <div class="col-md-1"> </div>
                 <div class="col-md-10 center">
-                    <h1>Diputados Locales <span id="estado"></span></h1>
+                    <h1>Candidatos a Diputados Locales <span id="estado"></span></h1>
                     <hr>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis voluptatibus enim, tenetur provident labore recusandae ducimus voluptate odit repudiandae pariatur quaerat debitis expedita similique quia voluptates natus, harum perferendis, autem.</p>
                     <div id="mensajeLocal">
                     </div>
                     <table>
@@ -142,6 +149,96 @@
                         <tbody id="diputadosltabla">
                         </tbody>
                     </table>
+                    <p class="leyenda">*Te recomendamos revisar su perfil en Facebook para encontrar más información acerca del candidato y sus propuestas para que puedas tomar una decisión informada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="informacion">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 center">
+                    <h1>¿Qué es el congreso de la Unión?</h1>
+                    <p class="biggerandbetter">El Poder Legislativo del Estado federal mexicano reside en el Congreso de la Unión, una asamblea conformada por dos Cámaras: </p>
+                    <br><br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>La Cámara Alta o de Senadores, que dentro de sus facultades se encuentra:</h3>
+                    <ul>
+                        <li>Elaborar o aprobar las iniciativas de ley a nivel federal.</li>
+                        <li>Aprobar la Estrategia Nacional de Seguridad Pública que presente el Presidente de la República.</li>
+                        <li>Ratificar los nombramientos de embajadores y cónsules generales.</li>
+                        <li>Nombrar a los Ministros de la Suprema Corte de Justicia de la Nación y el Fiscal General.</li>
+                        <li>Aprobar nombramientos de los Secretarios de Estado.</li>
+                        <li>Aprobar tratados internacionales y convenciones diplomáticas propuestas por el Presidente de la República.</li>
+                    </ul>
+                    <p>La cámara alta está conformada por 128 senadores, cada estado - independientemente de su población o territorio- tiene 2 representantes en esta cámara por mayoría relativa, otros 32 son por primera minoría, y los 32 faltantes son elegidos por principio de Representatividad popular.</p>
+                </div>
+                <div class="col-md-6">
+                    <h3>La Cámara Baja o de Diputados federales, que dentro de sus facultades se encuentra:</h3>
+                    <ul>
+                        <li>Elaborar o aprobar las iniciativas de ley a nivel federal.</li>
+                        <li>Declarar si procede o no penalmente contra los servidores públicos.</li>
+                        <li>Aprobar anualmente el presupuesto público de la federación.</li>
+                        <li>Aprobar el Plan Nacional de Desarrollo.</li>
+                        <li>Designar al titular del órgano interno de control del INE.</li>
+                        <li>Designar al titular de la Entidad de Fiscalización Superior de la Federación.</li>
+                        <li>Revisar la cuenta pública del año anterior, a través de la Auditoría Superior de la Federación.</li>
+                    </ul>
+                    <p>La cámara baja está conformada por 300 diputados por principio de Mayoría relativa y 200 por Representación Proporcional.</p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+            <div class="bg-congreso"></div>
+            <div class="container">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <br> <br>
+                    <h3>Cámara Local</h3>
+                    <p>Es el órgano en el que se deposita el Poder legislativo que le corresponde a una entidad federativa o Estado de la República mexicana. El congreso local es unicameral, es decir, solo cuenta con una Cámara de diputados locales. <br>Dentro de las facultades de los diputados locales están:</p>
+                    <ul>
+                        <li>Hacer y aprobar iniciativas de ley a nivel estatal.</li>
+                        <li>Presentar un informe anual sobre sus actividades, ante los ciudadanos de su distrito local.</li>
+                        <li>Aprobar el presupuesto anual del Estado.</li>
+                        <li>Nombrar al presidente de la Comisión Estatal de Derechos Humanos y a los ciudadanos consejeros.</li>
+                        <li>Elegir a los Magistrados del Tribunal Estatal Electoral.</li>
+                    </ul>
+                    <p>Existe un diputado local por cada distrito local.</p>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>¿Por qué es importante?</h2>
+                    <p>En el Congreso se crean leyes, se aprueban presupuestos y proyectos o se nombran cargos de órganos autónomos muy relevantes que impactan directamente nuestra vida, debemos cuidar quién llega a este espacio.
+                        <br>
+                        <br> Para saber más, consulta esta fuente:
+                        <br>
+                        <a href="http://www.senado.gob.mx/pdfs/documentos_apoyo/63-62/LXIII/FOLLETO_CONGRESO_actualizado_enero_2016.pdf">Folleto del congreso</a>
+                    </p>
+                    <h2>La división de representatividad en el país</h2>
+                    <p>Cada estado representa una entidad federativa (solo una) , en cada entidad federativa existen distritos federales y dentro de cada distrito federal existen distritos locales. Los dos últimos varían en cantidad dependiendo del número de habitantes en el territorio.</p>
+                    <h2>¿Qué es Representación Proporcional?</h2>
+                    <p>Principio de elección en el que se asignan cargos de representación popular dependiendo del porcentaje de votos obtenidos por un partido político en una región geográfica.</p>
+                </div>
+                <div class="col-md-6">
+                    <h2>¿Qué es Mayoría relativa?</h2>
+                    <p>La elección a través del voto directo y secreto de los ciudadanos.</p>
+                    <h2>¿Qué es primera minoría?</h2>
+                    <p>Principio de elección, donde se eligen a 32 senadores con base en la fórmula de candidatos que encabece la lista del partido político que, por sí mismo, haya ocupado el segundo lugar en número de votos en la entidad de que se trate. </p>
+                    <h2>Proceso para promulgación de una ley</h2>
+                    <p>Entérate del proceso para que una ley entre en vigor:
+                        <br><a href="http://www.diputados.gob.mx/bibliot/publica/prosparl/iproce.htm">Diputados.gob.mx</a></p>
+                    <h2>Iniciativa popular de Ley </h2>
+                    <p>Los ciudadanos contamos con un mecanismo de participación para presentar propuestas de ley ante el congreso; estas, deberán estar avaladas por una cantidad de firmas y pueden tratar sobre asuntos públicos o ser una reforma de un estatuto o una ley, o incluso una enmienda constitucional.
+                        <br>
+                        <a href="http://sil.gobernacion.gob.mx/Glosario/definicionpop.php?ID=251">¿Cómo proponer leyes?</a></p>
                 </div>
             </div>
         </div>
@@ -262,7 +359,7 @@
             $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
-            init('06', [19.096666666667,-103.96083333333], 10);
+            init('06', [19.096666666667, -103.96083333333], 10);
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);
@@ -294,7 +391,7 @@
             $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
-            init('01', [22.021666666667,-102.35638888889], 10);
+            init('01', [22.021666666667, -102.35638888889], 10);
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);

@@ -24,7 +24,62 @@
 #results h2{
   font-size: 25px;
 }
+#cta{
+  background-color: #FF7F7FFF;
+  color: white;
+  padding: 80px 150px;
+  font-size: 35px;
+  text-align: center;
+}
+.leyenda{
+  font-size: 14px;
+  color: #FF7F7FFF;
+}
+.bg-congreso{
+  background-image: url(../images/congreso.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 50vh;
+  width: 100%;
+  background-attachment: fixed;
+}
+.biggerandbetter{
+  font-size: 24px !important;
+}
+#informacion{
+  padding: 60px 0px;
+}
 
+#informacion h2{
+  font-size: 22px;
+  color: #FF7F7FFF;
+}
+#informacion h3{
+  font-size: 20px;
+  color: #FF7F7FFF;
+  font-weight: 600;
+}
+#informacion ul{
+  font-size: 18px;
+}
+#informacion a{
+  text-decoration: underline;
+  color: #FF7F7FFF;
+  transition: all 1s;
+}
+#informacion h1{
+  color: #FF7F7FFF;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+#informacion a:hover{
+  color: #FF4343;
+}
+
+#informacion p{
+  font-size: 17px;
+}
 .btn-results{
   padding: 10px 35px;
   text-align: center;
