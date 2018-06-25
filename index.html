@@ -5,13 +5,15 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>MiCongreso</title>
-    <meta name="description" content="">
+    <meta name="description" content="Conoce a los candidatos a senador, diputado federal y local.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="favicon.png" />
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="dist/styles/main.css">
+    <meta property="og:description" content="Conoce a los candidatos a senador, diputado federal y local." />
+    <meta property="og:image" content="dist/images/portada.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.3.0/css/iziToast.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120916875-1"></script>
@@ -278,9 +280,9 @@
                     <h2>¿Quién me representa?</h2>
                     <p>Admiramos profundamente el trabajo que han realizado en facilitar que el ciudadano se pueda poner en contacto con sus representantes. Visiten el sitio "¿Quién me representa?"" y conozcan más de este proyecto.</p>
                     <a href="http://www.quienmerepresenta.com">Sitio web</a>
-                    <h2>JaliscoComoVotamos</h2>
-                    <p>Queremos agradecer el apoyo de JaliscoComoVotamos y reconocerlos como una inspiración para MiCongreso. </p>
-                    <a href="jaliscocomovotamos.netlify.com">Sitio web</a>
+                    <h2>Jalisco Cómo Votamos</h2>
+                    <p>Queremos agradecer el apoyo del observatorio ciudadano <a href="http://jaliscocomovamos.org">Jalisco Cómo Vamos</a> que creó la plataforma Jalisco Cómo Votamos y reconocerlos como una inspiración para MiCongreso. </p>
+                    <a href="http://jaliscocomovotamos.netlify.com">Sitio web</a>
                 </div>
             </div>
         </div>
@@ -406,7 +408,215 @@
             $('html, body').animate({
                 scrollTop: $("#map").offset().top
             }, 2000);
-        } else if (estado === 'Nayarit') {
+        } else if (estado === "Baja California Sur") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('03', [25.846111, -111.972778], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Campeche") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('04', [18.836389, -90.403333], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Coahuila") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('05', [27.302222, -102.044722], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Chiapas") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('07', [16.41, -92.408611], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Chihuahua") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('08', [28.814167, -106.439444], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Distrito Federal") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('09', [19.419444, -99.145556], 10);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Durango") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('10', [24.934722, -104.911944], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        } else if (estado === "Guanajuato") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('11', [21.018889, -101.262778], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Guerrero") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('12', [17.613056, -99.95], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        } else if (estado === "Hidalgo") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('13', [20.478333, -98.863611], 9);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "México") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('15', [19.354167, -99.630833], 9);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Morelos") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('17', [18.7475, -99.070278], 10);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Nuevo León") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('19', [25.566667, -99.970556], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Oaxaca") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('20', [16.898056, -96.414167], 9);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Veracruz") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('30', [19.428889, -98.160833], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Puebla") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('21', [19.003611, -97.888333], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Querétaro") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('22', [20.591, -100.391], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Quintana Roo") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('23', [19.6, -87.916667], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "San Luis Potosí") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('24', [22.603333, -100.429722], 8);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Sinaloa") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('25', [25.002778, -107.502778], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Sonora") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('26', [29.646111, -110.868889], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Tabasco") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('27', [17.972222, -92.588889], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Tamaulipas") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('28', [24.287222, -98.563333], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Tlaxcala") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('29', [19.428889, -98.160833], 9);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Yucatán") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('31', [20.833333, -89], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === "Zacatecas") {
+            $("#results").html(resetPoint);
+            $("#map").css('display', 'block');
+            $("#pac-input").css('display', 'block');
+            init('32', [23.292778, -102.700556], 7);
+            $('html, body').animate({
+                scrollTop: $("#map").offset().top
+            }, 2000);
+        }else if (estado === 'Nayarit') {
             $("#results").html(resetPoint);
             $("#map").css('display', 'block');
             $("#pac-input").css('display', 'block');
@@ -510,6 +720,58 @@
                 cargarDatos(distrito, 18, false, long, lat, false, "");
             } else if (entidad === 2) {
                 cargarDatos(distrito, 2, false, long, lat, false, "");
+            } else if (entidad === 3) {
+                cargarDatos(distrito, 3, false, long, lat, false, "");
+            } else if (entidad === 4) {
+                cargarDatos(distrito, 4, false, long, lat, false, "");
+            } else if (entidad === 7) {
+                cargarDatos(distrito, 7, false, long, lat, false, "");
+            } else if (entidad === 8) { 
+                cargarDatos(distrito, 8, false, long, lat, false, "");
+            } else if (entidad === 5) { 
+                cargarDatos(distrito, 5, false, long, lat, false, "");
+            } else if (entidad === 10) { 
+                cargarDatos(distrito, 10, false, long, lat, false, "");
+            } else if (entidad === 11) { 
+                cargarDatos(distrito, 11, false, long, lat, false, "");
+            } else if (entidad === 12) { 
+                cargarDatos(distrito, 12, false, long, lat, false, "");
+            } else if (entidad === 13) { 
+                cargarDatos(distrito, 13, false, long, lat, false, "");
+            } else if (entidad === 14) { 
+                cargarDatos(distrito, 14, false, long, lat, false, "");
+            } else if (entidad === 15) { 
+                cargarDatos(distrito, 15, false, long, lat, false, "");
+            } else if (entidad === 17) { 
+                cargarDatos(distrito, 17, false, long, lat, false, "");
+            } else if (entidad === 19) { 
+                cargarDatos(distrito, 19, false, long, lat, false, "");
+            } else if (entidad === 20) { 
+                cargarDatos(distrito, 20, false, long, lat, false, "");
+            } else if (entidad === 21) { 
+                cargarDatos(distrito, 21, false, long, lat, false, "");
+            } else if (entidad === 22) { 
+                cargarDatos(distrito, 22, false, long, lat, false, "");
+            } else if (entidad === 23) { 
+                cargarDatos(distrito, 23, false, long, lat, false, "");
+            } else if (entidad === 24) { 
+                cargarDatos(distrito, 24, false, long, lat, false, "");
+            } else if (entidad === 25) { 
+                cargarDatos(distrito, 25, false, long, lat, false, "");
+            } else if (entidad === 26) { 
+                cargarDatos(distrito, 26, false, long, lat, false, "");
+            } else if (entidad === 27) { 
+                cargarDatos(distrito, 27, false, long, lat, false, "");
+            } else if (entidad === 28) { 
+                cargarDatos(distrito, 28, false, long, lat, false, "");
+            } else if (entidad === 29) { 
+                cargarDatos(distrito, 29, false, long, lat, false, "");
+            } else if (entidad === 30) { 
+                cargarDatos(distrito, 30, false, long, lat, false, "");
+            } else if (entidad === 31) { 
+                cargarDatos(distrito, 31, false, long, lat, false, "");
+            } else if (entidad === 32) { 
+                cargarDatos(distrito, 32, false, long, lat, false, "");
             } else if (entidad === 16) {
                 var lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
                 var long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
