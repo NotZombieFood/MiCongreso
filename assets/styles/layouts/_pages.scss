@@ -301,3 +301,17 @@ font-size: 20px;
   height: unset;
 }
 }
+
+.magic-column{
+  display: inline-block;
+    float: none;
+    img{
+      width:60%;
+    }
+    h1{
+      font-size: 14px !important;
+      color:#FF7F7FFF;
+          margin-top: 16px !important;
+    margin-bottom: 30px !important;
+    }
+}
