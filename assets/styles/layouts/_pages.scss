@@ -25,7 +25,7 @@
   font-size: 25px;
 }
 #cta{
-  background-color: #FF7F7FFF;
+  background-color: $primary_color;
   color: white;
   padding: 80px 150px;
   font-size: 35px;
@@ -33,7 +33,7 @@
 }
 .leyenda{
   font-size: 14px;
-  color: #FF7F7FFF;
+  color: $primary_color;
 }
 .bg-congreso{
   background-image: url(../images/congreso.jpg);
@@ -52,11 +52,11 @@
 
 #informacion h2{
   font-size: 22px;
-  color: #FF7F7FFF;
+  color: $primary_color;
 }
 #informacion h3{
   font-size: 20px;
-  color: #FF7F7FFF;
+  color: $primary_color;
   font-weight: 600;
 }
 #informacion ul{
@@ -64,11 +64,11 @@
 }
 #informacion a{
   text-decoration: underline;
-  color: #FF7F7FFF;
+  color: $primary_color;
   transition: all 1s;
 }
 #informacion h1{
-  color: #FF7F7FFF;
+  color: $primary_color;
   font-size: 50px;
   font-weight: bolder;
 }
@@ -83,7 +83,7 @@
 .btn-results{
   padding: 10px 35px;
   text-align: center;
-  background-color: #FF7F7FFF;
+  background-color: $primary_color;
   color: white;
   transition: all 1s;
   margin-top: 50px;
@@ -95,7 +95,7 @@
   color: white;
 }
 #results span{
-  color: #FF7F7FFF;
+  color: $primary_color;
 }
 #results h1{
   font-size: 35px;
@@ -111,13 +111,13 @@
 }
 #results table thead{
   border: none;
-  background-color: #FF7F7FFF;
+  background-color: $primary_color;
   color: white;
   text-align: center;
 }
 #results table tbody tr{
   border: none;
-  border-bottom: 1px solid #FF7F7FFF;
+  border-bottom: 1px solid $primary_color;
   color: #404040;
   text-align: center;
   font-weight: lighter;
@@ -136,7 +136,7 @@
 font-size: 20px;
 }
 #pac-input {
-    background-color: #FF7F7FFF;
+    background-color: $primary_color;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 300;
@@ -235,12 +235,12 @@ font-size: 20px;
 }
 
 .redesSociales:hover{
-  color: #FF7F7FFF;
+  color: $primary_color;
 }
 
 #contacto{
   padding: 60px 0px;
-  background-color: #FF7F7FFF;
+  background-color: $primary_color;
 
 }
 
@@ -310,7 +310,7 @@ font-size: 20px;
     }
     h1{
       font-size: 14px !important;
-      color:#FF7F7FFF;
+      color:$primary_color;
           margin-top: 16px !important;
     margin-bottom: 30px !important;
     }
