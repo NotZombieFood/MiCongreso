@@ -3,7 +3,7 @@
 Esta herramienta es una forma de conocer a nuestros diputados federales, senadores y diputados locales para así poder cominicarnos con ellos.
 
 ## ¿Puedo contribuir?
-Claro, no necesitas ser programador ni ser parte del club de Toby, todos son bienvenidos a contribuir. Nuestra recomendación para iniciar es visitar la lista de issues y encontrar alguna que creas que se adapta a ti y que disfrutarás hacer, además hemos taggeado algunas issues que podrían ser sencillas para empezar.  Si quieres proponer algo, igual es bueno crear una issue y prometemos verla; si eres más apenado nos lo puedes mandar por privado a [contacto@micongreso.com.mx.](http://mailto:contacto@micongreso.com.mx)
+Claro, no necesitas ser programador ni ser parte del club de Toby, todos son bienvenidos a contribuir. Nuestra recomendación para iniciar es visitar la lista de issues y encontrar alguna que creas que se adapta a ti y que disfrutarás hacer, además hemos taggeado algunas issues que podrían ser sencillas para empezar.  Si quieres proponer algo, igual es bueno crear una issue y prometemos verla; si eres más apenado nos lo puedes mandar por privado a [contacto@micongreso.com.mx.](mailto:contacto@micongreso.com.mx)
 
 ## ¿Como escribir código?
 El código está hecho para ser sencillo, por eso no usamos nada que requiera conocimientos muy profundos.
