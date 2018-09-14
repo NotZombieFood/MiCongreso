@@ -4,9 +4,10 @@
 /* global diputados */
 /* global turf */
 /* global mapa_local */
+/* global diputados_locales */
 var resetPoint = $("#results").html();
 
-function cargarDatos(distrito, entidad_numero,local) {
+function cargarDatos(distrito, entidad_numero, local) {
     $("#results").html(resetPoint);
     console.log("Cargando datos...");
     var relacion = {
@@ -49,7 +50,7 @@ function cargarDatos(distrito, entidad_numero,local) {
     for (var i = 0; i < diputados.length; i++) {
         if (diputados[i]["entidad"] == entidad) {
             if (diputados[i]["distrito"] == distrito || diputados[i]["distrito"] == 0) {
-                if (diputados[i]["tipo"]!='Representación proporcional'){
+                if (diputados[i]["tipo"] != 'Representación proporcional') {
                     html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", diputados[i]["imagen"]).replace("$nombre", diputados[i]["nombre"]);
                 }
             }
@@ -65,8 +66,21 @@ function cargarDatos(distrito, entidad_numero,local) {
     }
     html = html + '</div>';
     $("#rowSenadores").append(html);
-    if(local){
-        //do something fun
+    if (local) {
+        console.log("Estado: "+entidad);
+        console.log("Distrito local: " + local);
+        $("#texto_local").text("Diputados Locales");
+        html = "<div class='col-md-1'></div><div class='col-md-10 text-center center'>";
+        for (i = 0; i < diputados_locales.length; i++) {
+            if (diputados_locales[i]["Estado"] == entidad) {
+                if(diputados_locales[i]["Distrito"] == local){
+                    console.log("we got one");
+                    html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", diputados_locales[i]["Imagen"]).replace("$nombre", diputados_locales[i]["Nombre"]);
+                }
+            }
+        }
+        html = html + '</div>';
+        $("#rowLocales").append(html);
     }
     $('html, body').animate({
         scrollTop: $("#results").offset().top
@@ -346,6 +360,7 @@ $('.land').click(function () {
         });
     }
 });
+
 function buscadorPuntos(point, geojson) {
     for (var i = 0; i < geojson["features"].length; i++) {
         var poly = geojson["features"][i]["geometry"];
@@ -355,6 +370,7 @@ function buscadorPuntos(point, geojson) {
         }
     }
 }
+
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -424,17 +440,18 @@ function init(estado, coordenadas, zoom_input) {
         console.log('Lat:' + lat + ' Long:' + long);
         //Nayarit es el 18 y veracruz es el 30
         var distrito_local;
-        if (entidad == 18 || entidad == 30){
+        if (entidad == 18 || entidad == 30) {
             var rutaMapaLocal = "data/" + estado + "L.geojson"
             var pt1 = [long, lat - 0.02];
             $.getScript(rutaMapaLocal, function () {
                 distrito_local = buscadorPuntos(pt1, mapa_local);
                 console.log(distrito_local);
+                cargarDatos(distrito, entidad, distrito_local);
             });
-        }else{
+        } else {
             distrito_local = false;
+            cargarDatos(distrito, entidad, distrito_local);
         }
-        cargarDatos(distrito, entidad,distrito_local);
     });
 
     google.maps.event.addListener(map, 'click', function (e) {
