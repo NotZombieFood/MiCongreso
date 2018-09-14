@@ -649,7 +649,7 @@ var diputados = [
   },
   {
     "nombre": "Dip. José Ramón Cambero Pérez",
-    "imagen": "http://sitl.diputados.gob.mx/LXIV_leg/fotos_lxivconfondo/_foto_chica.jpg",
+    "imagen": "http://sitl.diputados.gob.mx/LXIV_leg/fotos_lxivconfondo/498_foto_chica.jpg",
     "email": "Email no registrado",
     "tipo": "Representación proporcional",
     "distrito": 1,

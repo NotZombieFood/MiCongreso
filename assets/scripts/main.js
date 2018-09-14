@@ -2,21 +2,56 @@
 /* global google */
 /* global senadores */
 /* global diputados */
-
+/* global turf */
+/* global mapa_local */
 var resetPoint = $("#results").html();
 
-function cargarDatos(distrito, entidad_numero) {
+function cargarDatos(distrito, entidad_numero,local) {
     $("#results").html(resetPoint);
     console.log("Cargando datos...");
-    var relacion = {1: 'Aguascalientes', 2: 'Baja California', 3: 'Baja California Sur', 4: 'Campeche', 5: 'Coahuila', 6: 'Colima', 7: 'Chiapas', 8: 'Chihuahua', 9: 'Ciudad de México', 10: 'Durango', 11: 'Guanajuato', 12: 'Guerrero', 13: 'Hidalgo', 14: 'Jalisco', 15: 'México', 16: 'Michoacán', 17: 'Morelos', 18: 'Nayarit', 19: 'Monterrey', 20: 'Oaxaca', 21: 'Puebla', 22: 'Quéretaro', 23: 'Quintana Roo', 24: 'San Luis Potosí', 25: 'Sinaloa', 26: 'Sonora', 27: 'Tabasco', 28: 'Tamaulipas', 29: 'Tlaxcala', 30: 'Veracruz', 31: 'Yucatán', 32: 'Zacatecas'}
+    var relacion = {
+        1: 'Aguascalientes',
+        2: 'Baja California',
+        3: 'Baja California Sur',
+        4: 'Campeche',
+        5: 'Coahuila',
+        6: 'Colima',
+        7: 'Chiapas',
+        8: 'Chihuahua',
+        9: 'Ciudad de México',
+        10: 'Durango',
+        11: 'Guanajuato',
+        12: 'Guerrero',
+        13: 'Hidalgo',
+        14: 'Jalisco',
+        15: 'México',
+        16: 'Michoacán',
+        17: 'Morelos',
+        18: 'Nayarit',
+        19: 'Monterrey',
+        20: 'Oaxaca',
+        21: 'Puebla',
+        22: 'Quéretaro',
+        23: 'Quintana Roo',
+        24: 'San Luis Potosí',
+        25: 'Sinaloa',
+        26: 'Sonora',
+        27: 'Tabasco',
+        28: 'Tamaulipas',
+        29: 'Tlaxcala',
+        30: 'Veracruz',
+        31: 'Yucatán',
+        32: 'Zacatecas'
+    }
     var entidad = relacion[entidad_numero];
     console.log(entidad);
-    //rowDiputados y rowSenadores
     var html = "<div class='col-md-1'></div><div class='col-md-10 text-center center'>";
     for (var i = 0; i < diputados.length; i++) {
-        if (diputados[i]["entidad"] == entidad ) {
-            if (diputados[i]["distrito"]==distrito) {
-                html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", diputados[i]["imagen"]).replace("$nombre", diputados[i]["nombre"]);
+        if (diputados[i]["entidad"] == entidad) {
+            if (diputados[i]["distrito"] == distrito || diputados[i]["distrito"] == 0) {
+                if (diputados[i]["tipo"]!='Representación proporcional'){
+                    html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", diputados[i]["imagen"]).replace("$nombre", diputados[i]["nombre"]);
+                }
             }
         }
     }
@@ -25,19 +60,21 @@ function cargarDatos(distrito, entidad_numero) {
     html = "<div class='col-md-1'></div><div class='col-md-10 text-center center'>";
     for (i = 0; i < senadores.length; i++) {
         if (senadores[i]["estado"] == entidad) {
-                html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", senadores[i]["imagen"]).replace("$nombre", senadores[i]["nombre"]);
+            html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre</h1> </div>".replace("$imagen", senadores[i]["imagen"]).replace("$nombre", senadores[i]["nombre"]);
         }
     }
     html = html + '</div>';
     $("#rowSenadores").append(html);
-
+    if(local){
+        //do something fun
+    }
     $('html, body').animate({
         scrollTop: $("#results").offset().top
     }, 2000);
 }
 
 $('[data-toggle="tooltip"]').tooltip();
-$('.land').click(function() {
+$('.land').click(function () {
     var estado = $(this).data("title");
     console.log(estado);
     $('.land').removeClass('active');
@@ -66,7 +103,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Campeche") {
+    } else if (estado === "Campeche") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -74,7 +111,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Coahuila") {
+    } else if (estado === "Coahuila") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -82,7 +119,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Chiapas") {
+    } else if (estado === "Chiapas") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -90,7 +127,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Chihuahua") {
+    } else if (estado === "Chihuahua") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -98,7 +135,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Distrito Federal") {
+    } else if (estado === "Distrito Federal") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -106,7 +143,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Durango") {
+    } else if (estado === "Durango") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -122,7 +159,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Guerrero") {
+    } else if (estado === "Guerrero") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -138,7 +175,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "México") {
+    } else if (estado === "México") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -146,7 +183,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Morelos") {
+    } else if (estado === "Morelos") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -154,7 +191,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Nuevo León") {
+    } else if (estado === "Nuevo León") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -162,7 +199,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Oaxaca") {
+    } else if (estado === "Oaxaca") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -170,7 +207,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Veracruz") {
+    } else if (estado === "Veracruz") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -178,7 +215,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Puebla") {
+    } else if (estado === "Puebla") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -186,7 +223,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Querétaro") {
+    } else if (estado === "Querétaro") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -194,7 +231,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Quintana Roo") {
+    } else if (estado === "Quintana Roo") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -202,7 +239,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "San Luis Potosí") {
+    } else if (estado === "San Luis Potosí") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -210,7 +247,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Sinaloa") {
+    } else if (estado === "Sinaloa") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -218,7 +255,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Sonora") {
+    } else if (estado === "Sonora") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -226,7 +263,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Tabasco") {
+    } else if (estado === "Tabasco") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -234,7 +271,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Tamaulipas") {
+    } else if (estado === "Tamaulipas") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -242,7 +279,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Tlaxcala") {
+    } else if (estado === "Tlaxcala") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -250,7 +287,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Yucatán") {
+    } else if (estado === "Yucatán") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -258,7 +295,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === "Zacatecas") {
+    } else if (estado === "Zacatecas") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -266,7 +303,7 @@ $('.land').click(function() {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    }else if (estado === 'Nayarit') {
+    } else if (estado === 'Nayarit') {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -309,7 +346,15 @@ $('.land').click(function() {
         });
     }
 });
-
+function buscadorPuntos(point, geojson) {
+    for (var i = 0; i < geojson["features"].length; i++) {
+        var poly = geojson["features"][i]["geometry"];
+        var isInside1 = turf.inside(point, poly);
+        if (isInside1) {
+            return geojson["features"][i]["properties"]["DISTRITO_L"];
+        }
+    }
+}
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
@@ -329,7 +374,10 @@ function init(estado, coordenadas, zoom_input) {
         disableDefaultUI: false,
         zoom: zoom_input,
         scrollwheel: false,
-        center: { lat: coordenadas[0], lng: coordenadas[1] },
+        center: {
+            lat: coordenadas[0],
+            lng: coordenadas[1]
+        },
         //center: new google.maps.LatLng(19.5445516,-99.1430878) // Nova Scotia
     };
     var mapElement = document.getElementById('map');
@@ -349,7 +397,7 @@ function init(estado, coordenadas, zoom_input) {
     ];
     //{"gid":3,"id":3,"entidad":18,"distrito":3} properties that we have
     //set random colors
-    map.data.setStyle(function() {
+    map.data.setStyle(function () {
         var random = getRandomInt(1, colorArray.length - 1);
         var color = colorArray[random];
         if (random > -1) {
@@ -359,15 +407,37 @@ function init(estado, coordenadas, zoom_input) {
             fillColor: color
         };
     });
-    map.data.addListener('click', function(event) {
+    map.data.addListener('click', function (event) {
         var entidad = event.feature.getProperty('entidad');
         var distrito = event.feature.getProperty('distrito');
         console.log("Estas picando el estado " + entidad + " y el distrito " + distrito);
         $("#results").css('display', 'block');
-        cargarDatos(distrito, entidad);
+        var lat = '';
+        var long = '';
+        try {
+            lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
+            long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
+        } catch (error) {
+            lat = event.feature.getGeometry().getArray()[0]["b"][0]["b"][0].lat();
+            long = event.feature.getGeometry().getArray()[0]["b"][0]["b"][0].lng();
+        }
+        console.log('Lat:' + lat + ' Long:' + long);
+        //Nayarit es el 18 y veracruz es el 30
+        var distrito_local;
+        if (entidad == 18 || entidad == 30){
+            var rutaMapaLocal = "data/" + estado + "L.geojson"
+            var pt1 = [long, lat - 0.02];
+            $.getScript(rutaMapaLocal, function () {
+                distrito_local = buscadorPuntos(pt1, mapa_local);
+                console.log(distrito_local);
+            });
+        }else{
+            distrito_local = false;
+        }
+        cargarDatos(distrito, entidad,distrito_local);
     });
 
-    google.maps.event.addListener(map, 'click', function(e) {
+    google.maps.event.addListener(map, 'click', function (e) {
         clearOverlays();
         var markerMagic = new google.maps.Marker({
             position: e.latLng,
@@ -383,13 +453,13 @@ function init(estado, coordenadas, zoom_input) {
     map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
 
     // Bias the SearchBox results towards current map's viewport.
-    map.addListener('bounds_changed', function() {
+    map.addListener('bounds_changed', function () {
         searchBox.setBounds(map.getBounds());
     });
 
     // Listen for the event fired when the user selects a prediction and retrieve
     // more details for that place.
-    searchBox.addListener('places_changed', function() {
+    searchBox.addListener('places_changed', function () {
         console.log("eu nuevo lugar");
         var places = searchBox.getPlaces();
 
@@ -401,7 +471,7 @@ function init(estado, coordenadas, zoom_input) {
 
         // For each place, get the icon, name and location.
         var bounds = new google.maps.LatLngBounds();
-        places.forEach(function(place) {
+        places.forEach(function (place) {
             if (!place.geometry) {
                 console.log("Returned place contains no geometry");
                 return;
