@@ -29,13 +29,13 @@ function cargarDatos(distrito, entidad_numero, local) {
         16: 'Michoacán',
         17: 'Morelos',
         18: 'Nayarit',
-        19: 'Monterrey',
+        19: 'Nuevo León',
         20: 'Oaxaca',
         21: 'Puebla',
         22: 'Quéretaro',
         23: 'Quintana Roo',
         24: 'San Luis Potosí',
-        25: 'Sinaloa',
+        25: 'Sinaloa',//me quede aqui
         26: 'Sonora',
         27: 'Tabasco',
         28: 'Tamaulipas',
@@ -149,7 +149,7 @@ $('.land').click(function () {
         $('html, body').animate({
             scrollTop: $("#map").offset().top
         }, 2000);
-    } else if (estado === "Distrito Federal") {
+    } else if (estado === "Ciudad de México") {
         $("#results").html(resetPoint);
         $("#map").css('display', 'block');
         $("#pac-input").css('display', 'block');
@@ -440,7 +440,7 @@ function init(estado, coordenadas, zoom_input) {
         console.log('Lat:' + lat + ' Long:' + long);
         //Nayarit es el 18 y veracruz es el 30
         var distrito_local;
-        if (entidad == 18 || entidad == 30) {
+        if (entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14) {
             var rutaMapaLocal = "data/" + estado + "L.geojson"
             var pt1 = [long, lat - 0.02];
             $.getScript(rutaMapaLocal, function () {
