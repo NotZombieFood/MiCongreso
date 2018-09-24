@@ -79,6 +79,14 @@ function cargarDatos(distrito, entidad_numero, local) {
                 }
             }
         }
+        for (i = 0; i < diputados_locales.length; i++) {
+            if (diputados_locales[i]["Estado"] == entidad) {
+                if(diputados_locales[i]["Distrito"] == 'RP'){
+                    console.log("we got one");
+                    html = html + "<div class='col-md-4 center text-center magic-column'> <img src='$imagen'> <h1>$nombre <br>Representación proporcional</h1> </div>".replace("$imagen", diputados_locales[i]["Imagen"]).replace("$nombre", diputados_locales[i]["Nombre"]);
+                }
+            }
+        }
         html = html + '</div>';
         $("#rowLocales").append(html);
     }

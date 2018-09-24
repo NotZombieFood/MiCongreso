@@ -1536,17 +1536,9 @@ var diputados_locales =[
     "Numero": 51301900
   },
   {
-    "Nombre": "Nombre",
-    "Imagen": "Imagen",
-    "Estado": "Estado",
-    "Distrito": "Distrito",
-    "Correo": "Correo",
-    "Numero": "Numero"
-  },
-  {
     "Nombre": "Gustavo Macías Zambrano",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 1,
     "Correo": "",
     "Numero": ""
@@ -1554,7 +1546,7 @@ var diputados_locales =[
   {
     "Nombre": "José de Jesús Hurtado Torres",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 2,
     "Correo": "",
     "Numero": ""
@@ -1562,7 +1554,7 @@ var diputados_locales =[
   {
     "Nombre": "Jorge Eduardo González Arana",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 3,
     "Correo": "",
     "Numero": ""
@@ -1570,7 +1562,7 @@ var diputados_locales =[
   {
     "Nombre": "Edgar Enrique Velázquez González",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 4,
     "Correo": "",
     "Numero": ""
@@ -1578,7 +1570,7 @@ var diputados_locales =[
   {
     "Nombre": "Luis Ernesto Munguía González",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 5,
     "Correo": "",
     "Numero": ""
@@ -1586,7 +1578,7 @@ var diputados_locales =[
   {
     "Nombre": "Mirza Flores Gómez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 6,
     "Correo": "",
     "Numero": ""
@@ -1594,7 +1586,7 @@ var diputados_locales =[
   {
     "Nombre": "María Ester López Chávez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 7,
     "Correo": "",
     "Numero": "PT"
@@ -1602,7 +1594,7 @@ var diputados_locales =[
   {
     "Nombre": "Héctor Alejandro Hermosillo González",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 8,
     "Correo": "",
     "Numero": ""
@@ -1610,7 +1602,7 @@ var diputados_locales =[
   {
     "Nombre": "Miriam Berenice Rivera Rodríguez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 9,
     "Correo": "",
     "Numero": ""
@@ -1618,7 +1610,7 @@ var diputados_locales =[
   {
     "Nombre": "Esteban Estrada Ramírez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 10,
     "Correo": "",
     "Numero": ""
@@ -1626,7 +1618,7 @@ var diputados_locales =[
   {
     "Nombre": "Arturo Lémus Herrea",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 11,
     "Correo": "",
     "Numero": ""
@@ -1634,7 +1626,7 @@ var diputados_locales =[
   {
     "Nombre": "Gerardo Quirino Velázquez Chávez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 12,
     "Correo": "",
     "Numero": ""
@@ -1642,7 +1634,7 @@ var diputados_locales =[
   {
     "Nombre": "Adenawer González Fierros",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 13,
     "Correo": "",
     "Numero": ""
@@ -1650,7 +1642,7 @@ var diputados_locales =[
   {
     "Nombre": "Priscilla Franco Barba",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 14,
     "Correo": "",
     "Numero": ""
@@ -1658,7 +1650,7 @@ var diputados_locales =[
   {
     "Nombre": "Carlos Eduardo Sánchez Carrillo",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 15,
     "Correo": "",
     "Numero": ""
@@ -1666,7 +1658,7 @@ var diputados_locales =[
   {
     "Nombre": "María Patricia Meza Núñez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 16,
     "Correo": "",
     "Numero": ""
@@ -1674,7 +1666,7 @@ var diputados_locales =[
   {
     "Nombre": "J. Jesús Cabrera Jiménez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 17,
     "Correo": "",
     "Numero": ""
@@ -1682,7 +1674,7 @@ var diputados_locales =[
   {
     "Nombre": "Irma de Anda Licea",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 18,
     "Correo": "",
     "Numero": ""
@@ -1690,7 +1682,7 @@ var diputados_locales =[
   {
     "Nombre": "Ma. Elizabeth Alcaraz Virgen",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 19,
     "Correo": "",
     "Numero": ""
@@ -1698,7 +1690,7 @@ var diputados_locales =[
   {
     "Nombre": "Daniel Robles de León",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": 20,
     "Correo": "",
     "Numero": ""
@@ -1706,7 +1698,7 @@ var diputados_locales =[
   {
     "Nombre": "Claudia Murguia Torres",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1714,7 +1706,7 @@ var diputados_locales =[
   {
     "Nombre": "José Hernán Cortés Berumen",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1722,7 +1714,7 @@ var diputados_locales =[
   {
     "Nombre": "Mariana Fernández Ramírez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1730,7 +1722,7 @@ var diputados_locales =[
   {
     "Nombre": "Héctor Pizano Ramos",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1738,7 +1730,7 @@ var diputados_locales =[
   {
     "Nombre": "J. Jesús Zúñiga Mendoza",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1746,7 +1738,7 @@ var diputados_locales =[
   {
     "Nombre": "Sofía Berenice García Mosqueda",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1754,7 +1746,7 @@ var diputados_locales =[
   {
     "Nombre": "Rosa Angélica Fregoso Franco",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1762,7 +1754,7 @@ var diputados_locales =[
   {
     "Nombre": "Martha Patricia Martínez Barba",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1770,7 +1762,7 @@ var diputados_locales =[
   {
     "Nombre": "Salvador Caro Cabrera",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1778,7 +1770,7 @@ var diputados_locales =[
   {
     "Nombre": "Jonadab Martínez García",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1786,7 +1778,7 @@ var diputados_locales =[
   {
     "Nombre": "Mara Nadiezhda Robles Villaseñor",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1794,7 +1786,7 @@ var diputados_locales =[
   {
     "Nombre": "Ricardo Rodríguez Jiménez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1802,7 +1794,7 @@ var diputados_locales =[
   {
     "Nombre": "Norma Valenzuela Álvarez",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1810,7 +1802,7 @@ var diputados_locales =[
   {
     "Nombre": "Ismael Espanta Tejeda",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1818,7 +1810,7 @@ var diputados_locales =[
   {
     "Nombre": "Bruno Blancas Mercado",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1826,7 +1818,7 @@ var diputados_locales =[
   {
     "Nombre": "Érika Pérez García",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1834,7 +1826,7 @@ var diputados_locales =[
   {
     "Nombre": "Óscar Arturo Herrera Estrada",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
@@ -1842,7 +1834,7 @@ var diputados_locales =[
   {
     "Nombre": "Óscar Nicolas García Lomelí",
     "Imagen": "http://micongreso.com.mx/proximamente.png",
-    "Estado": 14,
+    "Estado": "Jalisco",
     "Distrito": "RP",
     "Correo": "",
     "Numero": ""
