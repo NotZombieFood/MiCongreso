@@ -448,7 +448,7 @@ function init(estado, coordenadas, zoom_input) {
         console.log('Lat:' + lat + ' Long:' + long);
         //Nayarit es el 18 y veracruz es el 30
         var distrito_local;
-        if (entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14) {
+        if (entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14 || entidad == 19 || entidad == 32) {
             var rutaMapaLocal = "data/" + estado + "L.geojson"
             var pt1 = [long, lat - 0.02];
             $.getScript(rutaMapaLocal, function () {
