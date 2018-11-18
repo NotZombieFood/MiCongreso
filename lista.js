@@ -1,0 +1,34 @@
+{ //entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14 || entidad == 19 || entidad == 32)
+    "Aguascalientes" =  1,
+    "Baja California" =  2,
+    "Baja California Sur" =  3,
+    "Campeche" =  4,
+    "Coahuila" =  5,
+    "Colima" =  6,
+    "Chiapas" =  7,
+    "Chihuahua" =  8,
+    "Ciudad de México" =  9, //done
+    "Durango" =  10,
+    "Guanajuato" =  11,
+    "Guerrero" =  12 //done,
+    "Hidalgo" =  13,
+    "Jalisco" =  14, //done
+    "México" =  15,
+    "Michoacán" =  16,
+    "Morelos" =  17,
+    "Nayarit" =  18 //done,
+    "Monterrey" =  19, //done
+    "Oaxaca" =  20,
+    "Puebla" =  21,
+    "Quéretaro" =  22,
+    "Quintana Roo" =  23,
+    "San Luis Potosí" =  24,
+    "Sinaloa" =  25,
+    "Sonora" =  26,
+    "Tabasco" =  27,
+    "Tamaulipas" =  28,
+    "Tlaxcala" =  29,
+    "Veracruz" =  30 //done,
+    "Yucatán" =  31,
+    "Zacatecas" =  32 //done
+}

@@ -438,17 +438,19 @@ function init(estado, coordenadas, zoom_input) {
         $("#results").css('display', 'block');
         var lat = '';
         var long = '';
+        console.log(event.feature.getGeometry().getArray()[0]);
         try {
-            lat = event.feature.getGeometry().getArray()[0]["b"][0].lat();
-            long = event.feature.getGeometry().getArray()[0]["b"][0].lng();
+            lat = event.feature.getGeometry().getArray()[0].j[0].lat();
+            long = event.feature.getGeometry().getArray()[0].j[0].lng();
         } catch (error) {
-            lat = event.feature.getGeometry().getArray()[0]["b"][0]["b"][0].lat();
-            long = event.feature.getGeometry().getArray()[0]["b"][0]["b"][0].lng();
+            lat = event.feature.getGeometry().getArray()[0].j[0].j[0].lat();
+            long = event.feature.getGeometry().getArray()[0].j[0].j[0].lng();
         }
         console.log('Lat:' + lat + ' Long:' + long);
         //Nayarit es el 18 y veracruz es el 30
         var distrito_local;
-        if (entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14 || entidad == 19 || entidad == 32) {
+        if (entidad == 18 || entidad == 30 || entidad == 12 || entidad == 9 || entidad == 14 || entidad == 19 || entidad == 32 || entidad == 21 || entidad == 27 || entidad == 28) {
+            console.log("Obtendremos locales");
             var rutaMapaLocal = "data/" + estado + "L.geojson"
             var pt1 = [long, lat - 0.02];
             $.getScript(rutaMapaLocal, function () {
